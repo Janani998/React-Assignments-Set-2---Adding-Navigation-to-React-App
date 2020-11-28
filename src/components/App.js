@@ -2,15 +2,22 @@ import React, { Component, useState } from "react";
 import "../styles/App.css";
 import { Home } from "./home";
 import { About } from "./about";
+import { NoMatch } from "./nomatch";
 import { LocationDisplay } from "./LocationDisplay";
+import { Link, Switch, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div id="main">
-        {/* <LocationDisplay /> */}
-        <Home />
-        <About />
+        <LocationDisplay />
+        <Link to="/">{Home}</Link>
+        <Link to="/about">{About}</Link>
+        <Switch>
+          <Route path="/about" component={About} />
+          <Route path="/" exact component={Home} />
+          <Route path="/" component={NoMatch} />
+        </Switch>
         {/* Do not remove the main div */}
       </div>
     );

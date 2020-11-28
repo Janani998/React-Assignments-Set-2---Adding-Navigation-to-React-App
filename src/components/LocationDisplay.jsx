@@ -4,8 +4,5 @@ import { useLocation } from "react-router-dom";
 
 export function LocationDisplay() {
   let location = useLocation();
-  React.useEffect(() => {
-    console.log(location);
-    // ga.send(["pageview", location.pathname]);
-  }, [location]);
+  return <div data-testid="location-display">{location.pathname}</div>;
 }
