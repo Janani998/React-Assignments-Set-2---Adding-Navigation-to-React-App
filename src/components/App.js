@@ -3,7 +3,7 @@ import "../styles/App.css";
 import { Home } from "./home";
 import { About } from "./about";
 import { NoMatch } from "./nomatch";
-import LocationDisplay from "./LocationDisplay";
+import LocationDisplayPath from "./LocationDisplay";
 import { Link, Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/" component={NoMatch} />
         </Switch>
-        <LocationDisplay />
+        <LocationDisplayPath />
         {/* Do not remove the main div */}
       </div>
     );
@@ -25,3 +25,4 @@ class App extends Component {
 }
 
 export default App;
+export const LocationDisplay = LocationDisplayPath;
