@@ -3,7 +3,7 @@ import "../styles/App.css";
 import { Home } from "./home";
 import { About } from "./about";
 import { NoMatch } from "./nomatch";
-import { LocationDisplay } from "./LocationDisplay";
+import LocationDisplay from "./LocationDisplay";
 import { Link, Switch, Route } from "react-router-dom";
 
 class App extends Component {
