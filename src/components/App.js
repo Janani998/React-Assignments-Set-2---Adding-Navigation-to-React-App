@@ -10,7 +10,6 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <LocationDisplay />
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Switch>
@@ -18,6 +17,7 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/" component={NoMatch} />
         </Switch>
+        <LocationDisplay />
         {/* Do not remove the main div */}
       </div>
     );
