@@ -11,8 +11,8 @@ class App extends Component {
     return (
       <div id="main">
         <LocationDisplay />
-        <Link to="/">{Home}</Link>
-        <Link to="/about">{About}</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/" exact component={Home} />
